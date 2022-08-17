@@ -1,6 +1,8 @@
 # FERRAMENTA DE WEB SCRAPING PARA PRODUTOS E-COMMERCE
 
+
 Funcionalidades:
+
 •	Um leitor de dados HTML de sites, onde o usuário insere apenas a identificação do frame, as informações que deseja e a respectiva tag. Esse leitor fará o processo de paginação e coleta de dados de todos os produtos.
 
 •	Um leitor de API de sites: alguns sites disponibilizam APIs com informações dos produtos. Neste caso, o usuário vai passar as mesmas informações do primeiro caso e o software vai utilizar a mesma engine para a coleta de dados de produtos.
