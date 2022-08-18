@@ -15,3 +15,4 @@ Funcionalidades:
 
 •	Comparação de preço. O usuário pode criar a correspondência de um produto em várias lojas diferentes, através do código do produto (SKU). Com isso, é possível fazer comparação de preço produto a produto. 
 
+Texto completo: https://docs.google.com/document/d/1IAXkkSTYQioYzoNkkyuSzPG0-8neFi-F (no Google alguns trechos ficam com formatação quebrada).
