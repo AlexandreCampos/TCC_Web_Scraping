@@ -1,0 +1,5 @@
+instalar tkinter
+instalar mysql
+pip install requirements.txt
+python install_database.py
+

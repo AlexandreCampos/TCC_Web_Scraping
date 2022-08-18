@@ -1,0 +1,24 @@
+categoria,quantidade,média do preço antigo,média do preço atual,menor preço antigo,maior preço antigo,menor preço atual,maior preço atual
+masculino|oculos-de-sol|quadrado,37,,77.73783915751689,,,49.9,129.9
+masculino|oculos-de-sol|redondo,17,,76.95882505529067,,,49.9,99.9
+feminino|oculos-de-sol|redondo,6,,111.56666310628255,,,49.9,129.9
+feminino|oculos-de-sol|quadrado,6,,96.56666692097981,,,49.9,129.9
+masculino|oculos-de-sol|aviador,44,,615.1427274183793,,,49.9,1073.68
+feminino|oculos-de-sol|aviador,3,,109.89999898274739,,,99.9,129.9
+masculino|oculos-de-sol|esportivo,73,,281.78493154865424,,,49.9,499.0
+feminino|oculos-de-sol|acessorios-para-oculos,17,,25.899999618530273,,,9.9,29.9
+masculino|oculos-de-sol|acessorios-para-oculos,4,,152.9249997138977,,,19.9,552.0
+masculino|acessorios,1,,69.9000015258789,,,69.9,69.9
+masculino|oculos-de-sol|armacoes,434,,525.3718196851318,,,47.9,2030.0
+masculino|oculos-de-sol|gateado,1,,627.7000122070312,,,627.7,627.7
+masculino|relogios|classico,241,,979.952906058537,,,97.7,3090.0
+masculino|relogios|casual,633,,632.1241204862911,,,87.7,7967.7
+masculino|relogios|esportivo,283,,328.45703218682496,,,29.9,4560.9
+masculino|relogios|social,59,,888.5696589583057,,,129.0,8330.0
+masculino|relogios|fashion,122,,420.41352106313235,,,129.0,6800.0
+feminino|relogios|fashion,22,,264.4527300054377,,,49.9,699.9
+feminino|relogios|smartwatch,4,,639.9000244140625,,,599.9,699.9
+masculino|relogios|smartwatch,30,,576.1933349609375,,,189.0,1250.0
+masculino|relogios,3,,259.0,,,259.0,259.0
+feminino|relogios|casual,8,,309.4025020599365,,,139.9,699.9
+feminino|relogios|classico,1,,499.8999938964844,,,499.9,499.9
