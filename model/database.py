@@ -2,7 +2,9 @@ import mysql.connector
 
 
 DATABASE_NAME = "projeto_scrapper"
-
+HOST="localhost"
+USER="root"
+PASSWORD="root"
 
 def connect():
     '''
@@ -14,9 +16,9 @@ def connect():
     '''
 
     con = mysql.connector.connect(
-      host="localhost",
-      user="root",
-      password="root",
+      host=HOST,
+      user=USER,
+      password=PASSWORD,
       database=DATABASE_NAME
     )
     cursor = con.cursor()
@@ -38,22 +40,25 @@ class SimpleQuery(object):
         Returns:
             created (boolean): The result of query
         '''
-        
+
         if verify:
             query = "CREATE DATABASE IF NOT EXISTS {}".format(name)
         else:
             query = "CREATE DATABASE {}".format(name)
         try:
-            con, cursor = connect()
+            mydb = mysql.connector.connect(
+                host=HOST,
+                user=USER,
+                password=PASSWORD
+            )
+            cursor = mydb.cursor()
             cursor.execute(query)
             return True
         except mysql.connector.Error as e:
             print(f"Falha ao criar database: {e}")
             return False
         finally:
-            if con.is_connected():
-                cursor.close()
-                con.close()
+            cursor.close()
 
     def table_exists(self, name):
         '''
