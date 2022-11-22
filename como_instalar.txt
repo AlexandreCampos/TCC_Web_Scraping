@@ -1,5 +1,6 @@
+utilizar Python 3.9 (ultimo teste realizado nessa versão)
 instalar tkinter
 instalar mysql
-pip install requirements.txt
+pip install -r requirements.txt
 python install_database.py
 

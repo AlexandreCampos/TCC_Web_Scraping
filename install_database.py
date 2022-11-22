@@ -17,8 +17,8 @@ class InstallDatabase(object):
         self.create_table_category()
         self.create_table_category_json()
         self.create_table_regex()
-        self.create_table_product()
         self.create_table_comparison()
+        self.create_table_product()
 
         # passar para o create quando for possível
         self.update_table_store_config()
@@ -118,7 +118,7 @@ class InstallDatabase(object):
                         get_category_by_first_name_json BOOLEAN,
                         new_price_get_price_json BOOLEAN,
                         old_price_get_price_json BOOLEAN,
-                        sale_price_get_price_json BOOLEAN
+                        sale_price_get_price_json BOOLEAN,
                         url_api VARCHAR(255),
                         old_price_node_keys VARCHAR(255)
                     )
@@ -217,6 +217,28 @@ class InstallDatabase(object):
             else:
                 sys.exit()
 
+    def create_table_comparison(self):
+        ''' Create Table query.'''
+
+        name = 'comparison'
+        exists = self.sq.table_exists(name)
+        if exists == -1:
+            sys.exit()
+        elif exists:
+            print(f"Tabela {name} já existe.")
+        else:
+            created = self.sq.create_table(
+                """
+                    CREATE TABLE {name} (
+                        id INT AUTO_INCREMENT PRIMARY KEY,
+                        sku VARCHAR(255)
+                    )
+                """.format(name=name)
+            )
+            if created:
+                print("Tabela {} criada.".format(name))
+            else:
+                sys.exit()
 
     def create_table_product(self):
         ''' Create Table query.'''
@@ -252,29 +274,6 @@ class InstallDatabase(object):
                         CONSTRAINT fk_product_comparison
                         FOREIGN KEY (comparison_id)
                         REFERENCES comparison (id)              
-                    )
-                """.format(name=name)
-            )
-            if created:
-                print("Tabela {} criada.".format(name))
-            else:
-                sys.exit()
-
-    def create_table_comparison(self):
-        ''' Create Table query.'''
-
-        name = 'comparison'
-        exists = self.sq.table_exists(name)
-        if exists == -1:
-            sys.exit()
-        elif exists:
-            print(f"Tabela {name} já existe.")
-        else:
-            created = self.sq.create_table(
-                """
-                    CREATE TABLE {name} (
-                        id INT AUTO_INCREMENT PRIMARY KEY,
-                        sku VARCHAR(255)
                     )
                 """.format(name=name)
             )
